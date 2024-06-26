@@ -9,6 +9,7 @@ app.set("views", "./views");
 app.set("view engine", "ejs");
 
 app.use("/", home); //미들웨어를 등록해주는 메서드
+app.use(express.static(__dirname + '/public'));
 
 module.exports = app;
 
