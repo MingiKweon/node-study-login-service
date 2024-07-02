@@ -17,6 +17,18 @@ class UserStorage {
         }, {}); //reduce 메소드 //hasOwnProperty == 해당 키 값이 있냐 물어보는거임.
         return newUsers;
     }
+    
+    static getUserInfo(id) {
+        const users = this.#users;
+        const idx = users.id.indexOf(id);
+        const usersKeys = Object.keys(users); //이게 list가 되는거임?
+        const userInfo = usersKeys.reduce((newUser, info) => {
+            newUser[info] = users[info][idx];
+            return newUser;
+        }, {});
+
+        return userInfo;
+    }
 }
 //#는 private개념
 
