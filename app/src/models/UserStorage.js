@@ -5,7 +5,7 @@ class UserStorage {
         id: ["kmingi159", "1gun", "epicviolet0216"],
         psword: ["0000", "1234", "4321"],
         name: ["권민기", "최원건", "김민수"]
-    };
+    }; //이렇게 되면은 서버를 껐을 때 의미가 없어짐. -> DB
 
     static getUsers(...fields) {
         const users = this.#users;
@@ -28,6 +28,16 @@ class UserStorage {
         }, {});
 
         return userInfo;
+    }
+
+    static save(userInfo) {
+        const users = this.#users;
+        users.id.push(userInfo.id);
+        users.name.push(userInfo.name);
+        users.psword.push(userInfo.psword);
+        console.log(users);
+
+        return { success: true };
     }
 }
 //#는 private개념

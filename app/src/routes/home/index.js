@@ -7,7 +7,9 @@ const ctrl = require("./home.ctrl");
 
 router.get("/", ctrl.output.home); //ctrl.output.home;
 router.get("/login", ctrl.output.login); //라우팅
-router.post("/login", ctrl.process.login); //API okay
+router.get("/register", ctrl.output.register);
 
+router.post("/login", ctrl.process.login); //API okay
+router.post("/register", ctrl.process.register);
 
 module.exports = router;

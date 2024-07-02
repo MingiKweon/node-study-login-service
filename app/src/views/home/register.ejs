@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/js/home/login.js" defer></script>
+    <script src="/js/home/register.js" defer></script>
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css/home/login.css" />
 </head>
@@ -11,10 +11,12 @@
     <div class="login-page">
         <div class="form">
           <form class="login-form">
-            <input id="id" type="text" placeholder="username"/>
-            <input id="psword" type="password" placeholder="password"/>
-            <button>login</button>
-            <p class="message">Not registered? <a href="/register">Create an account</a></p>
+            <input id="id" type="text" placeholder="아이디"/>
+            <input id="name" type="text" placeholder="이름"/>
+            <input id="psword" type="password" placeholder="비밀번호"/>
+            <input id="confirm-psword" type="password" placeholder="비밀번호 확인"/>
+            <p id="button">회원가입</p>
+            <p class="message">이미 계정이 있나요? <a href="/login">로그인하러 가기</a></p>
           </form>
         </div>
     </div>
